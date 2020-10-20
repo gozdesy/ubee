@@ -160,22 +160,22 @@ var data = [
     itemImage_img: 'img/portfolio/p4.jpg'
   },
   {
-    projectName: "Consultant Force Company List",
+    projectName: "Consulting Force - Company List",
     projectLink_href: '',
     itemImage_img: 'img/portfolio/p5.jpg'
   },
   {
-    projectName: "Consultant Force Contract Editing",
+    projectName: "Consulting Force - Contract Editing",
     projectLink_href: '',
     itemImage_img: 'img/portfolio/p6.jpg'
   },
   {
-    projectName: "Consultant Force Report",
+    projectName: "Consulting Force - Report",
     projectLink_href: '',
     itemImage_img: 'img/portfolio/p7.jpg'
   },
   {
-    projectName: "Consultant Force Data Transfer Between Consultants",
+    projectName: "Consulting Force - Data Transfer Between Consultants",
     projectLink_href: '',
     itemImage_img: 'img/portfolio/p8.jpg'
   }
