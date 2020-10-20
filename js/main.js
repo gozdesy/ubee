@@ -134,6 +134,86 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  
+// Define data for the popup
+var data = [
+  {
+    projectName: "Recommended Users", // Key "username" means that Magnific Popup will look for an element with class "mfp-username" in markup and will replace its inner HTML with the value.
+    projectLink_href: 'https://girlsaskguys.com', // Key "userWebsite_href" means that Magnific Popup will look for an element with class "mfp-userWebsite" and will change its "href" attribute. Instead of ending "href" you may put any other attribute.
+    itemImage_img: 'img/portfolio/p1.jpg' // Prefix "_img" is special. With it Magnific Popup finds an  element "userAvatarUrl" and replaces it completely with image tag.
+  },
+  
+  {
+    projectName: "Who Liked?",
+    projectLink_href: 'https://girlsaskguys.com',
+    itemImage_img: 'img/portfolio/p2.jpg',
+  },
+  
+  {
+    projectName: "Mention Picker",
+    projectLink_href: 'https://girlsaskguys.com',
+    itemImage_img: 'img/portfolio/p3.jpg'
+  },
+  {
+    projectName: "Last Content Avatars",
+    projectLink_href: 'https://girlsaskguys.com',
+    itemImage_img: 'img/portfolio/p4.jpg'
+  },
+  {
+    projectName: "Consultant Force Company List",
+    projectLink_href: '',
+    itemImage_img: 'img/portfolio/p5.jpg'
+  },
+  {
+    projectName: "Consultant Force Contract Editing",
+    projectLink_href: '',
+    itemImage_img: 'img/portfolio/p6.jpg'
+  },
+  {
+    projectName: "Consultant Force Report",
+    projectLink_href: '',
+    itemImage_img: 'img/portfolio/p7.jpg'
+  },
+  {
+    projectName: "Consultant Force Data Transfer Between Consultants",
+    projectLink_href: '',
+    itemImage_img: 'img/portfolio/p8.jpg'
+  }
+];
+
+// initalize popup
+$('.my-portfolio-popup').each(function() {
+  var $btn = $(this);
+  $btn.magnificPopup({ 
+      key: 'my-popup', 
+      items: data,
+      type: 'inline',
+      inline: {
+        // Define markup. Class names should match key names.
+        markup: '<div class="white-popup"><div class="mfp-close"></div>'+
+                '<h2 class="mfp-projectName"></h2>'+
+                '<a class="btn-projects mfp-projectLink" target="_blank">Go to Project</a>'+
+                '<div class="mfp-itemImage"></div>'+
+                '</div>'
+      },
+      gallery: {
+        enabled: true 
+      },
+      callbacks: {
+        markupParse: function(template, values, item) {
+          // optionally apply your own logic - modify "template" element based on data in "values"
+           //console.log('Parsing:', template, values, item);
+        }
+      }
+    });
+  });
+
+$('.my-portfolio-popup').on('mfpOpen', function(e /*, params */) {
+  var $btn = $(this);
+  var id = $btn.data("id");
+  $.magnificPopup.instance.goTo(id);
+});
+
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,

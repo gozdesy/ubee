@@ -701,17 +701,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all ease-in-out 0.4s;
 }
 
+#portfolio .col-lg-3{
+  border: 8px solid #50d8af;
+  margin: 5px;
+  max-height: 400px;
+}
+
 #portfolio .portfolio-item {
   overflow: hidden;
   position: relative;
   padding: 0;
   vertical-align: middle;
   text-align: center;
+  height: 100%;
 }
 
 #portfolio .portfolio-item h2 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 0px;
   margin: 0;
   text-transform: capitalize;
   font-weight: 700;
@@ -732,12 +739,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: rgba(0, 0, 0, 0.7);
 }
 
+#portfolio .portfolio-item:hover .portfolio-overlay h2 {
+ font-size: 24px;
+}
+
 #portfolio .portfolio-info {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#portfolio .my-portfolio-popup {
+  display: inline-block;
 }
 
 /* Testimonials Section
@@ -1137,3 +1152,44 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 20px;
   }
 }
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.white-popup img {
+  max-width: 700px;
+  height: auto;
+}
+
+.white-popup a {
+  display: block;
+}
+
+.fa-linkedin {
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.white-popup .btn-projects {
+  background: #50d8af;
+  border: 2px solid #50d8af;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+}
+
