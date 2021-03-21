@@ -1,0 +1,10 @@
+#metricsify-editor-root {
+  position: fixed;
+  bottom: 20px;
+  background: aqua;
+  padding: 20px;
+  right: 20px;
+  width: 300px; }
+
+.selected-element {
+  border: 2px solid blue; }
